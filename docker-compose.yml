@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    container_name: data_structures_and_algorithms_app
+    command: python /app/bst.py
+    volumes:
+      - ./app/:/app:rw
